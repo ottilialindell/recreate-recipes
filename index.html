@@ -4,24 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/51caa18442.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <title>Recreate recipes</title>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="head-logo">
-        Works
-        Services
-        Contact
-        <nav>
-            <ul>
-                <li><a href="#works"></a>Works</li>
-                <li><a href="#services"></a>Services</li>
-                <li><a href="#contact"></a>Contact</li>
-            </ul>
-        </nav>
+        <div class="layout__header">
+            <img src="images/logo.png" alt="head-logo" class="header__logo">
+            <nav class="nav" id="nav-bar">
+                <ul class="nav__list">
+                    <li class="nav__li"><a class="active" href="#home"></a>Home</li>
+                    <li class="nav__li"><a href="#works"></a>Works</li>
+                    <li class="nav__li"><a href="#services"></a>Services</li>
+                    <li class="nav__li"><a href="#contact"></a>Contact</li>
+                    <a class="icon__nav" onclick="burgerMenu()">
+                        <i class="fa fa-bars"></i>
+                        </a>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-
+    <main class="main">
+        <section class="grid__position">
+            <!---Var tvungen att skriva grid i html-koden. Varför?-->
+            <div class="grid__container" style="display: grid">
+                <div class="grid__first">
+                    <h1 class="main__heading">Recipes</h1>
+                </div>
+                <div class="grid__second">
+                    <p class="main__info">Fusce vehicula dolor arcu, 
+                        sit amet blandit dolor mollis nec. Donec viverra eleifend 
+                        lacus, vitae ullamcor.</p>
+                </div>
+                <div class="grid__fourth">
+                    <!---VARFÖR FUNKADE INTE DETTA?
+                    <div class="adaptive-photo"></div>
+                    -->
+                    <picture>
+                        <source media="(max-width: 400px)" srcset="images/image-s.png">
+                        <source media="(max-width: 800px)" srcset="images/image-m.png">
+                        <source media="(min-width: 1001px)" srcset="images/image-l.png">
+                            <img src="images/image-s.png" alt="image of soup">
+                    </picture>
+                </div>
+                <div class="grid__third">
+                    <div class="icon"><i class="fas fa-long-arrow-alt-down fa-5x"></i></div>
+                    <!----
+                    <svg class="svg__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 350 100">
+                        <defs>
+                            <marker id="arrowhead" markerwidth="10" markerheight="7" 
+                            refx="0" refy="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" />
+                            </marker>
+                        </defs>
+                        <line x1="10" y1="0" x2="10" y2="50" stroke="#000" 
+                        stroke-width="2" marker-end="url(#arrowhead)" />
+                    </svg>
+                -->
+                </div>
+            </div>
+        </section>
+        <script>
+            function burgerMenu() {
+                let burger = document.getElementById("nav-bar");
+                if (burger.className === "icon__nav") {
+                burger.className += " responsive";
+                } else {
+                burger.className = "nav";
+                }
+            }
+            </script>
     </main>
     
 </body>

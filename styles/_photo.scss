@@ -1,0 +1,22 @@
+/* 
+    varför funkar inte dessa?
+*/
+
+
+@media screen and (max-width: 800px) {
+    .adaptive-photo {
+        background-image: url("/images/image-m.png");
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .adaptive-photo {
+        background-image: url("/images/image-s.png");
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .adaptive-photo {
+        background-image: url("/images/image-l.png");
+    }
+}

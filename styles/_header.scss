@@ -1,3 +1,56 @@
 header {
+    width: 100%;
     max-width: 1160px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
 }
+
+.layout__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 60px;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.nav {
+    max-width: 1160px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    margin-left: 80px;
+
+
+    &__list {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        margin-top: -35px;
+        flex-direction: row;
+        margin-left: 10px;
+    }
+
+    &__li {
+        list-style-type: none;
+    }
+}
+
+/* hovereffekt funkar inte och länkarna är inte klickbara. Varför? */
+
+.nav a {
+    font-size: 16px;
+    color: #242635;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20px;
+    &:hover {
+        color: #bdbdc2;
+    }
+}
+
